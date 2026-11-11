@@ -1,7 +1,7 @@
 // Replace these two values with the Supabase Project URL and anon/public key.
 // NEVER put the service_role key in this file or in any public website file.
-const SUPABASE_URL = "PASTE_SUPABASE_PROJECT_URL_HERE";
-const SUPABASE_ANON_KEY = "PASTE_SUPABASE_ANON_PUBLIC_KEY_HERE";
+const SUPABASE_URL = "https://qwtayfqtiwsuehsemibm.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_OQPWDXzR_kUXvAsz6NPNkw_WV92e4Gs";
 const configured = !SUPABASE_URL.startsWith("PASTE_") && !SUPABASE_ANON_KEY.startsWith("PASTE_");
 const $ = (id) => document.getElementById(id);
 let db, currentKind = "admissions";
