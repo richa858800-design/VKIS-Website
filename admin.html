@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VKIS Staff Portal</title><link rel="stylesheet" href="/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="/admin.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <header><div class="crest">VKIS</div><div><p class="eyebrow">V.K. INTERNATIONAL SR. SEC. SCHOOL</p><h1>Staff Portal</h1><p class="muted">Secure application dashboard</p></div></header>
+    <section id="setup" class="panel notice" hidden><h2>Setup required</h2><p>Ask the authorised site administrator to add the Supabase project URL and public anon key in <code>admin.js</code>, then complete the database setup in the README.</p></section>
+    <section id="login" class="panel">
+      <h2>Staff sign in</h2><p class="muted">Only authorised school staff accounts can access applications.</p>
+      <form id="login-form"><label>Email<input id="email" type="email" autocomplete="username" required></label><label>Password<input id="password" type="password" autocomplete="current-password" required></label><button>Sign in</button><p id="login-message" class="message" role="status"></p></form>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="bar"><div><h2>Applications</h2><p id="signed-in" class="muted"></p></div><button id="logout" class="secondary">Sign out</button></div>
+      <nav><button class="tab active" data-kind="admissions">Admissions</button><button class="tab" data-kind="jobs">Job applications</button><button id="refresh" class="secondary">Refresh</button></nav>
+      <p id="dash-message" class="message" role="status"></p>
+      <div class="table-wrap"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div>
+      <p class="small muted">Treat applicant information as confidential. Download or share it only with authorised school staff.</p>
+    </section>
+    <footer>VKIS · Staff access only</footer>
+  </main>
+</body></html>
